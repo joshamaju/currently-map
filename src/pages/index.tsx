@@ -28,9 +28,9 @@ export default function Home() {
     const onDraw = () => {
       const data = draw!.getAll();
 
-      // if (environment === "native") {
-      //   window.ReactNativeWebView.postMessage(JSON.stringify(data));
-      // }
+      if (environment === "native") {
+        window.ReactNativeWebView.postMessage(JSON.stringify(data));
+      }
     };
 
     if (map && draw) {
