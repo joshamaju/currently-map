@@ -1,4 +1,5 @@
 import "mapbox-gl/dist/mapbox-gl.css";
+import "@mapbox/mapbox-gl-draw/dist/mapbox-gl-draw.css";
 
 import { DrawControl, DrawControlRef } from "$app/controls/draw";
 import { useEffect, useState } from "react";
@@ -27,9 +28,9 @@ export default function Home() {
     const onDraw = () => {
       const data = draw!.getAll();
 
-      if (environment === "native") {
-        window.ReactNativeWebView.postMessage(JSON.stringify(data));
-      }
+      // if (environment === "native") {
+      //   window.ReactNativeWebView.postMessage(JSON.stringify(data));
+      // }
     };
 
     if (map && draw) {
